@@ -31,11 +31,11 @@ function formatAndSendTweet(event) {
     //     return;
     // }
 
-    // OPTIONAL PREFERENCE - if you want the tweet to include an attached image instead of just text
-    // const imageUrl = _.get(event, ['asset', 'image_url']);
-    // return tweet.tweetWithImage(tweetText, imageUrl);
 
-    return tweet.tweet(tweetText);
+    const imageUrl = _.get(event, ['asset', 'image_url']);
+    return tweet.tweetWithImage(tweetText, imageUrl);
+
+    //return tweet.tweet(tweetText);
 }
 
 // Poll OpenSea every 120 seconds & retrieve all sales for a given collection in either the time since the last sale OR in the last minute
