@@ -51,7 +51,7 @@ setInterval(() => {
         params: {
             collection_slug: process.env.OPENSEA_COLLECTION_SLUG,
             event_type: 'successful',
-            occurred_after: lastSaleTime,
+            occurred_after: last_sale,
             only_opensea: 'false'
         }
     }).then((response) => {
